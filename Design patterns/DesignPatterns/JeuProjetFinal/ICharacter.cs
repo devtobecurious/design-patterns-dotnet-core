@@ -11,5 +11,9 @@ namespace JeuProjetFinal
         void Attaquer(ICharacter enemy);
         void Subir(int point);
         int PointsDeVie { get; }
+
+        int MaxLife { get; set; }
+
+        int MaxStrength { get; set; }
     }
 }
