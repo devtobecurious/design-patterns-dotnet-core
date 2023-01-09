@@ -16,6 +16,10 @@ namespace JeuProjetFinal
             this.arme = bridge;
         }
 
+        public Player()
+        {
+        }
+
         public void Attaquer(ICharacter enemy)
         {
             int point = this.arme.DonnerUnCoup();
@@ -28,5 +32,7 @@ namespace JeuProjetFinal
         }
 
         public int PointsDeVie { get; private set; }
+        public int MaxLife { get; set; }
+        public int MaxStrength { get; set; }
     }
 }

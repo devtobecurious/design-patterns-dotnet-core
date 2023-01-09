@@ -1,4 +1,5 @@
 ﻿using JeuProjetFinal;
+using JeuProjetFinal.Adapter;
 using JeuProjetFinal.Bridge;
 using JeuProjetFinal.Composite;
 using JeuProjetFinal.Decorator;
@@ -34,5 +35,13 @@ powerContainer2.Add(new LifePower(10));
 // Facade
 GameSaver saver = new GameSaver("ic");
 saver.Save(new Game());
+
+// Adapter
+var npc = new NPC(new WizardLanguage());
+npc.Speak("Hello, Harry !");
+
+var npcSerpentar = new NPC(new FourcheLangAdapter(new FourcheLang()));
+npc.Speak("Comment vas-tu ?");
+
 
 
