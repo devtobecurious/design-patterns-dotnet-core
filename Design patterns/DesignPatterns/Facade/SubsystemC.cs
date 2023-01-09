@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Facade
+{
+    internal class SubsystemC
+    {
+        internal string C1() => "C: C1";
+    }
+}
