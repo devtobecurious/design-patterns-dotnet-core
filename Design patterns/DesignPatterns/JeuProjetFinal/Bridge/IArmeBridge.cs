@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JeuProjetFinal
+namespace JeuProjetFinal.Bridge
 {
-    internal class Enemy : ICharacter
+    internal interface IArmeBridge
     {
-        public Enemy() { }
-
-        
+        int DonnerUnCoup();
     }
 }

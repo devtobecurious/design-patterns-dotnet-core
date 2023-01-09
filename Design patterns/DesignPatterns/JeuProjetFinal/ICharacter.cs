@@ -8,5 +8,8 @@ namespace JeuProjetFinal
 {
     internal interface ICharacter
     {
+        void Attaquer(ICharacter enemy);
+        void Subir(int point);
+        int PointsDeVie { get; }
     }
 }

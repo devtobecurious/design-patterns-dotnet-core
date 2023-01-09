@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethod", "FactoryMethod\FactoryMethod.csproj", "{F5F5CC11-004A-4E67-A6E6-F857B781F846}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactoryMethod", "FactoryMethod\FactoryMethod.csproj", "{F5F5CC11-004A-4E67-A6E6-F857B781F846}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeuProjetFinal", "JeuProjetFinal\JeuProjetFinal.csproj", "{C32B4729-602E-4950-8AA7-0063F182E124}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeuProjetFinal", "JeuProjetFinal\JeuProjetFinal.csproj", "{C32B4729-602E-4950-8AA7-0063F182E124}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesignPatternList", "DesignPatternList", "{045A5760-E32D-4C2E-8067-01B03960FDB1}"
 EndProject
@@ -13,9 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Structural patterns", "Stru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Creator patterns", "Creator patterns", "{044CF00D-DBEA-4BAF-BF43-83EB759C3C9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator", "Decorator\Decorator.csproj", "{D2518674-5266-4005-A570-612100B73433}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decorator", "Decorator\Decorator.csproj", "{D2518674-5266-4005-A570-612100B73433}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxy", "Proxy\Proxy.csproj", "{5FDE999D-11A2-45DF-8E12-02242C629CC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proxy", "Proxy\Proxy.csproj", "{5FDE999D-11A2-45DF-8E12-02242C629CC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge", "Bridge\Bridge.csproj", "{8DBF47EB-59F1-41A0-9893-EDE488122F54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{5FDE999D-11A2-45DF-8E12-02242C629CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FDE999D-11A2-45DF-8E12-02242C629CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FDE999D-11A2-45DF-8E12-02242C629CC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DBF47EB-59F1-41A0-9893-EDE488122F54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DBF47EB-59F1-41A0-9893-EDE488122F54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DBF47EB-59F1-41A0-9893-EDE488122F54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DBF47EB-59F1-41A0-9893-EDE488122F54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +55,7 @@ Global
 		{044CF00D-DBEA-4BAF-BF43-83EB759C3C9E} = {045A5760-E32D-4C2E-8067-01B03960FDB1}
 		{D2518674-5266-4005-A570-612100B73433} = {E2BA72CD-281A-499F-B421-915AB29F8360}
 		{5FDE999D-11A2-45DF-8E12-02242C629CC9} = {E2BA72CD-281A-499F-B421-915AB29F8360}
+		{8DBF47EB-59F1-41A0-9893-EDE488122F54} = {E2BA72CD-281A-499F-B421-915AB29F8360}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {11050C5D-FDDC-4B25-A1D5-E6916FF09A90}
