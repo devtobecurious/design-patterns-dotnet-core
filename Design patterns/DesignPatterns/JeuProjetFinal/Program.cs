@@ -5,6 +5,7 @@ using JeuProjetFinal.Builder;
 using JeuProjetFinal.Composite;
 using JeuProjetFinal.Decorator;
 using JeuProjetFinal.Facade;
+using JeuProjetFinal.Factory_method;
 using JeuProjetFinal.Proxy;
 using JeuProjetFinal.Singleton;
 
@@ -52,6 +53,9 @@ motor.StartNewGame();
 // Builder
 GameDirector director = new (new DefaultGameBuilder());
 Game? game = director.Build();
+
+// Factory methode
+IPotion position = (new PotionCreator()).Create(1);
 
 
 
