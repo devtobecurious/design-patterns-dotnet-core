@@ -5,6 +5,7 @@ using JeuProjetFinal.Composite;
 using JeuProjetFinal.Decorator;
 using JeuProjetFinal.Facade;
 using JeuProjetFinal.Proxy;
+using JeuProjetFinal.Singleton;
 
 // Décorateur
 IPotion potion = new Potion();
@@ -42,6 +43,10 @@ npc.Speak("Hello, Harry !");
 
 var npcSerpentar = new NPC(new FourcheLangAdapter(new FourcheLang()));
 npc.Speak("Comment vas-tu ?");
+
+// Singleton
+GameMotor motor = GameMotor.Instance;
+motor.StartNewGame();
 
 
 
