@@ -1,6 +1,7 @@
 ﻿using JeuProjetFinal;
 using JeuProjetFinal.Adapter;
 using JeuProjetFinal.Bridge;
+using JeuProjetFinal.Builder;
 using JeuProjetFinal.Composite;
 using JeuProjetFinal.Decorator;
 using JeuProjetFinal.Facade;
@@ -47,6 +48,10 @@ npc.Speak("Comment vas-tu ?");
 // Singleton
 GameMotor motor = GameMotor.Instance;
 motor.StartNewGame();
+
+// Builder
+GameDirector director = new (new DefaultGameBuilder());
+Game? game = director.Build();
 
 
 

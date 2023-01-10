@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JeuProjetFinal
+namespace Builder
 {
-    internal class Game
+    internal interface IBuilder
     {
+        void BuildA();
+        void BuildB();
+
+        Product GetResult();
     }
 }
