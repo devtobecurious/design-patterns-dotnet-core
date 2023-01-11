@@ -18,7 +18,9 @@ namespace JeuProjetFinal.Singleton
 
         public Game StartNewGame()
         {
-            this.currentGame = new Game();
+            GameDirector director = new(new DefaultGameBuilder());
+
+            this.currentGame = director.Build();
 
             return this.currentGame;
         }

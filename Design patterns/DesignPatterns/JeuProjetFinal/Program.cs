@@ -3,6 +3,7 @@ using JeuProjetFinal.AbstractFactory;
 using JeuProjetFinal.Adapter;
 using JeuProjetFinal.Bridge;
 using JeuProjetFinal.Builder;
+using JeuProjetFinal.Command;
 using JeuProjetFinal.Composite;
 using JeuProjetFinal.Decorator;
 using JeuProjetFinal.Facade;
@@ -76,3 +77,6 @@ player.RequestInput(() =>
     return input;
 });
 
+// Command
+Application application = Application.Instance;
+application.Initialize();
