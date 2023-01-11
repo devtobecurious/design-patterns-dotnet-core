@@ -8,6 +8,7 @@ using JeuProjetFinal.Composite;
 using JeuProjetFinal.Decorator;
 using JeuProjetFinal.Facade;
 using JeuProjetFinal.Factory_method;
+using JeuProjetFinal.Mediator;
 using JeuProjetFinal.Proxy;
 using JeuProjetFinal.Singleton;
 using JeuProjetFinal.State;
@@ -80,3 +81,11 @@ player.RequestInput(() =>
 // Command
 Application application = Application.Instance;
 application.Initialize();
+
+// Mediator
+var store = new Store();
+IMediator<Store> mediator = new Mediator<Store>(new Store(), store =>
+{
+    Console.WriteLine("Action is running");
+});
+mediator.Dispatch(new SaveGameRequest<Game, Store>(new Game()));
