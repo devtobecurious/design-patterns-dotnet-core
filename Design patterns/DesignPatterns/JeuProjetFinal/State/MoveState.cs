@@ -15,7 +15,7 @@ namespace JeuProjetFinal.State
 
         public void Update(PlayerContext context)
         {
-            Position position = new Position();
+            Position position = Position.Empty;
 
             if (context.CurrentInput.Key == "D")
             {
@@ -36,6 +36,11 @@ namespace JeuProjetFinal.State
             else
             {
                 context.CurrentState = new IdleState();
+            }
+
+            if (! position.Equals(Position.Empty))
+            {
+                context.CurrentPosition = position;
             }
         }
     }

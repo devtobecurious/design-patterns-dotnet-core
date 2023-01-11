@@ -8,6 +8,8 @@ namespace JeuProjetFinal.State
 {
     internal struct Position
     {
+        public static Position Empty = new Position() { x = 0, y = 0 };
+
         public int x;
         public int y;
     }

@@ -15,12 +15,12 @@ namespace JeuProjetFinal.Builder
         public void AddPlayer(Player player)
         {
             this.player = player;
+            this.player.Died += PlayerIsDied;
         }
 
         public void AddEnemy(Enemy enemy)
         {
             this.enemies.Add(enemy);
         }
-
     }
 }

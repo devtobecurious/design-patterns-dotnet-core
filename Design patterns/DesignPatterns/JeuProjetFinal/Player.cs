@@ -12,6 +12,7 @@ namespace JeuProjetFinal
     {
         private IArmeBridge arme;
         private PlayerContext context;
+        public event Action<Player> Died;
 
         public Player(IArmeBridge bridge) : this()
         {
@@ -40,7 +41,21 @@ namespace JeuProjetFinal
             this.PointsDeVie -= point;
         }
 
-        public int PointsDeVie { get; private set; }
+        private int pointsDeVie = 100;
+        public int PointsDeVie
+        {
+            get => pointsDeVie;
+            private set
+            {
+                this.pointsDeVie = value;
+                if (this.pointsDeVie <= 0)
+                {
+                    this.pointsDeVie = 0;
+                    this.Died?.Invoke(this);
+                }
+            }
+        }
+
         public int MaxLife { get; set; }
         public int MaxStrength { get; set; }
     }
