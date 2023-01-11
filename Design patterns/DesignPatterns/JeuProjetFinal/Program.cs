@@ -1,4 +1,5 @@
 ﻿using JeuProjetFinal;
+using JeuProjetFinal.AbstractFactory;
 using JeuProjetFinal.Adapter;
 using JeuProjetFinal.Bridge;
 using JeuProjetFinal.Builder;
@@ -54,8 +55,10 @@ motor.StartNewGame();
 GameDirector director = new (new DefaultGameBuilder());
 Game? game = director.Build();
 
-// Factory methode
+// Factory method
 IPotion position = (new PotionCreator()).Create(1);
 
-
+// Abstract factory
+IQuestFactory<Level1Category> factory = new RpgQuestFactory<Level1Category>();
+var rewards = factory.CreateRewards();
 
