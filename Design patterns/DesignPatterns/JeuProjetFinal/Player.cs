@@ -1,4 +1,5 @@
 ﻿using JeuProjetFinal.Bridge;
+using JeuProjetFinal.State;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,14 +11,22 @@ namespace JeuProjetFinal
     internal class Player : ICharacter
     {
         private IArmeBridge arme;
+        private PlayerContext context;
 
-        public Player(IArmeBridge bridge)
+        public Player(IArmeBridge bridge) : this()
         {
             this.arme = bridge;
         }
 
         public Player()
         {
+            this.context = new PlayerContext(this);
+            this.context.CurrentState = new IdleState();
+        }
+
+        public void RequestInput(Func<Input> input)
+        {
+            this.context.Request(input());
         }
 
         public void Attaquer(ICharacter enemy)
