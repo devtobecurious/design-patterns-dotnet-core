@@ -12,7 +12,10 @@ namespace JeuProjetFinal
     {
         private IArmeBridge arme;
         private PlayerContext context;
+
+        #region Observer
         public event Action<Player> Died;
+        #endregion
 
         public Player(IArmeBridge bridge) : this()
         {
@@ -51,7 +54,9 @@ namespace JeuProjetFinal
                 if (this.pointsDeVie <= 0)
                 {
                     this.pointsDeVie = 0;
+                    #region Observer
                     this.Died?.Invoke(this);
+                    #endregion
                 }
             }
         }
