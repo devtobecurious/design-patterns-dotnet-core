@@ -12,6 +12,11 @@ namespace JeuProjetFinal.Builder
         private Player? player = null;
         private List<Enemy> enemies = new List<Enemy>();
 
+        public void PlayerIsDied(Player player)
+        {
+            Console.WriteLine("Player is dead ! Game over !");
+        }
+
         public void AddPlayer(Player player)
         {
             this.player = player;
