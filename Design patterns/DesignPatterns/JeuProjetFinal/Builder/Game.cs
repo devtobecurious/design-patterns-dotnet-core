@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace JeuProjetFinal.Builder
 {
-    internal class Game
+    internal class Game : ICloneable
     {
         private Player? player = null;
         private List<Enemy> enemies = new List<Enemy>();
@@ -21,9 +21,9 @@ namespace JeuProjetFinal.Builder
 
         public void AddPlayer(Player player)
         {
-            this.player = player;
+            this.CurrentPlayer = player;
             #region Observer
-            this.player.Died += PlayerIsDied;
+            this.CurrentPlayer.Died += PlayerIsDied;
             #endregion
         }
 
@@ -31,5 +31,12 @@ namespace JeuProjetFinal.Builder
         {
             this.enemies.Add(enemy);
         }
+
+        public object Clone()
+        {
+            return new Game();
+        }
+
+        public Player CurrentPlayer { get => player; private set => player = value; }
     }
 }
